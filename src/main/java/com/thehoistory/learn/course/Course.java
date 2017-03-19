@@ -13,8 +13,6 @@ import java.util.List;
 
 
 @Entity
-@Getter
-@Setter
 public class Course extends BaseEntity{
 
 
@@ -39,5 +37,29 @@ public class Course extends BaseEntity{
     public void addReview(Review review){
         review.setCourse(this);
         reviews.add(review);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }

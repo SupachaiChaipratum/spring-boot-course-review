@@ -3,14 +3,11 @@ package com.thehoistory.learn.review;
 
 import com.thehoistory.learn.core.BaseEntity;
 import com.thehoistory.learn.course.Course;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
 
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
 public class Review extends BaseEntity{
 
 
@@ -27,5 +24,29 @@ public class Review extends BaseEntity{
     public Review(int rating, String description) {
         this.rating = rating;
         this.description = description;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }
