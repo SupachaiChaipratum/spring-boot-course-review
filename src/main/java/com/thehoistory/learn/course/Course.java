@@ -1,5 +1,6 @@
 package com.thehoistory.learn.course;
 
+import com.thehoistory.learn.core.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -9,17 +10,16 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Course {
+public class Course extends BaseEntity{
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long id;
     private String title;
     private String url;
 
-    protected Course(){
-        this.id = null;
+
+    public Course(){
+        super();
+
     }
     public Course(String title, String url) {
         this();

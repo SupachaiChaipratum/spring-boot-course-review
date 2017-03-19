@@ -1,6 +1,7 @@
 package com.thehoistory.learn.review;
 
 
+import com.thehoistory.learn.core.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -10,12 +11,14 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Review {
+public class Review extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long id;
+
     private int rating;
     private String description;
+
+    public Review(){
+        super();
+    }
 
 }
